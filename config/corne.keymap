@@ -43,9 +43,8 @@ macros {
     tap-ms = <0>;
     bindings
       = <&macro_press &kp LALT>
-      , <&macro_tap &kp N>
+      , <&macro_tap &kp N0 &kp N0 &kp F &kp N1>
       , <&macro_release &kp LALT>
-      , <&macro_tap &kp N>
       ;    
   };
 
@@ -56,11 +55,8 @@ macros {
     tap-ms = <0>;
     bindings
       = <&macro_press &kp LALT>
-      , <&macro_tap &kp N>
+      , <&macro_tap &kp N0 &kp N0 &kp D &kp N1>
       , <&macro_release &kp LALT>
-      , <&macro_press &kp LSHFT>
-      , <&macro_tap &kp N>
-      , <&macro_release &kp LSHFT>
       ;    
   };
 
@@ -71,7 +67,7 @@ macros {
     tap-ms = <0>;
     bindings
       = <&macro_press &kp LALT>
-      , <&macro_tap &kp E>
+      , <&macro_tap &kp N0 &kp N0 &kp B &kp N4>
       , <&macro_release &kp LALT>
       ;    
   };
@@ -83,7 +79,7 @@ macros {
     tap-ms = <0>;
     bindings
       = <&macro_press &kp LALT>
-      , <&macro_tap &kp N1>
+      , <&macro_tap &kp N0 &kp N0 &kp A &kp N1>
       , <&macro_release &kp LALT>
       ;    
   };
