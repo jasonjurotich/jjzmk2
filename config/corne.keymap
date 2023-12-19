@@ -9,6 +9,81 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+macros {
+  #define OS_LEAD  &kp RALT &kp U  // OS specific sequence to initialize unicode
+  #define OS_TRAIL &kp RET         // OS specific sequence to terminate unicode
+
+  ntil: ntil { 
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <OS_LEAD &kp 0 &kp 0 &kp D &kp 1 OS_TRAIL>;
+  };
+
+  ntilup: ntilup { 
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <OS_LEAD &kp 0 &kp 0 &kp F &kp 1 OS_TRAIL>;
+  };
+
+  qmkdn: qmkdn {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <OS_LEAD &kp 0 &kp 0 &kp B &kp F OS_TRAIL>;
+  };
+
+  excldn: excldn {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <OS_LEAD &kp 0 &kp 0 &kp A &kp 1 OS_TRAIL>;
+  };
+
+  accut: accut {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <OS_LEAD &kp 0 &kp 0 &kp B &kp 4 OS_TRAIL>;
+  };
+
+  pss: pss {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <&kp I &kp I&kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E &kp RET>;
+  };
+
+  locks: locks {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LCTRL &kp LGUI>
+        , <&macro_tap &kp Q>
+        , <&macro_release &kp LCTRL &kp LGUI>
+        ;
+  };
+
+  copies: copies {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LGUI &kp LSHFT>
+        , <&macro_tap &kp 4>
+        , <&macro_release &kp LGUI &kp LSHFT>
+        ;
+  };
+};
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
