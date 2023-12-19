@@ -40,7 +40,7 @@ macros {
     #binding-cells = <0>;
     wait-ms = <5>;
     tap-ms = <5>;
-    bindings = <OS_LEAD &kp 0 &kp 0 &kp D &kp 1 OS_TRAIL>;
+    bindings = <OS_LEAD &kp 0 &kp 0 &kp F &kp 1 OS_TRAIL>;
   };
 
   ntilup: ntilup { 
@@ -48,7 +48,7 @@ macros {
     #binding-cells = <0>;
     wait-ms = <5>;
     tap-ms = <5>;
-    bindings = <OS_LEAD &kp 0 &kp 0 &kp F &kp 1 OS_TRAIL>;
+    bindings = <OS_LEAD &kp 0 &kp 0 &kp D &kp 1 OS_TRAIL>;
   };
 
   qmkdn: qmkdn {
@@ -80,7 +80,7 @@ macros {
     #binding-cells = <0>;
     wait-ms = <5>;
     tap-ms = <5>;
-    bindings = <&kp I &kp I&kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E &kp RET>;
+    bindings = <&kp I &kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E &kp RET>;
   };
 
   locks: locks {
@@ -97,9 +97,9 @@ macros {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&macro_press &kp LGUI &kp LSHFT>
+        = <&macro_press &kp LCMD &kp LSHFT>
         , <&macro_tap &kp 4>
-        , <&macro_release &kp LGUI &kp LSHFT>
+        , <&macro_release &kp LCMD &kp LSHFT>
         ;
   };
 };
@@ -112,10 +112,10 @@ macros {
     // -----------------------------------------------------------------------------------------
     default_layer {
       bindings = <
-       &none  &kp Q        &kp W   &kp E  &kp R       &kp T       &kp Y  &kp U       &kp I      &kp O     &kp P          &none  
-       &none  &lt NAV A    &kp S   &kp D  &lt NUM F   &kp G       &kp H  &lt NUM J   &kp K      &kp L     &lt NAV ENTER  &none
-       &none  &mt LCTRL Z  &kp X   &kp C  &mt LALT V  &kp B       &kp N  &kp M       &kp COMMA  &kp DOT   &kp BSPC       &none
-              &mt LGUI TAB  &mt LSHIFT ESC     &none              &none  &mt RSHIFT SPACE       &kp CAPS      
+       &none  &kp Q         &kp W   &kp E  &kp R       &kp T       &kp Y  &kp U       &kp I      &kp O     &kp P          &none  
+       &none  &lt NAV A     &kp S   &kp D  &lt NUM F   &kp G       &kp H  &lt NUM J   &kp K      &kp L     &lt NAV ENTER  &none
+       &none  &mt LCTRL Z   &kp X   &kp C  &mt LALT V  &kp B       &kp N  &kp M       &kp COMMA  &kp DOT   &kp BSPC       &none
+              &mt LCMD TAB  &mt LSHFT ESC     &none               &none  &mt RSHFT SPACE       &kp CAPS      
       >;
     };
 
@@ -134,7 +134,7 @@ macros {
       bindings = <      
         &trans  BTC   BT0   BT1   BT2    &kp C_MUTE             CVOLU  CVOLD  CSPRE  CSNEX  &kp C_PP  &trans  
         &trans  BOUT  BOUU  BOUB  CBRID  CBRIU                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &ntil  &trans
-        &trans  &kp GRAVE  &ntilup  &kp LT  &kp GT  &kp HOME    &qmkdn  &kp COLON  &kp SQT  &kp DQT  &accut &trans
+        &trans  &kp GRAVE  &ntilup  &kp LT  &kp GT  &kp HOME    &qmkdn  &kp COLON  &kp SQT  &kp DQT  &accut   &trans
                          &locks  &copies  &trans                &trans         &excldn     &pss
       >;
     };
