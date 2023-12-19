@@ -151,7 +151,7 @@ macros {
     tap-ms = <5>;
     bindings
         = <&macro_press &kp LGUI &kp LSHFT>
-        , <&macro_tap &kp 4>
+        , <&macro_tap &kp N4>
         , <&macro_release &kp LGUI &kp LSHFT>
         ;
   };
