@@ -97,23 +97,23 @@ macros {
        &none  &kp Q        &kp W   &kp E  &kp R       &kp T       &kp Y  &kp U       &kp I      &kp O     &kp P          &none  
        &none  &lt NAV A    &kp S   &kp D  &lt NUM F   &kp G       &kp H  &lt NUM J   &kp K      &kp L     &lt NAV ENTER  &none
        &none  &mt LCTRL Z  &kp X   &kp C  &mt LALT V  &kp B       &kp N  &kp M       &kp COMMA  &kp DOT   &kp BSPC       &none
-              &mt LGUI TAB  &mt LSHIFT ESC     &none              &none  &mt RSHIFT SPACE       &kp CAPS
-
-      
-       // &none   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &none
-       // &none &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &none
-       // &none &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
-       //                &kp LGUI &mo 1 &none   &none &mo 2 &kp RALT
+              &mt LGUI TAB  &mt LSHIFT ESC     &none              &none  &mt RSHIFT SPACE       &kp CAPS      
       >;
     };
 
     // -----------------------------------------------------------------------------------------
     lower_layer {
       bindings = <
-       &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-       &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &qmkdn
-       &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+       &trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR  &kp PRCNT        &kp N7  &kp N8      &kp N9    &kp N0     &kp STAR   &trans
+       &trans  &kp AMPS   &kp PIPE  &kp TILDE  &kp LPAR  &kp RPAR         &kp N4  &kp N5      &kp N6    &kp PLUS   &kp MINUS  &trans
+       &trans  &kp UNDER  &kp BSLH  &kp CARET  &kp LBKT  &kp RBKT         &kp N1  &kp N2      &kp N3    &kp EQUAL  &kp FSLH   &trans
+                            &kp LBRC   &kp RBRC  &trans                   &trans   &kp QMARK   &kp SEMI
+
+      
+       // &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+       // &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &qmkdn
+       // &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+       //                                  &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
       >;
     };
 
