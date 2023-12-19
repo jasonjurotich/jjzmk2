@@ -15,7 +15,21 @@
 
 #define BT0  &bt BT_SEL 0
 #define BT1  &bt BT_SEL 1
+#define BT2  &bt BT_SEL 2
+#define BTC  &bt BT_CLR
 
+#define CVOLU  &kp C_VOL_UP
+#define CVOLU  &kp C_VOL_DN
+#define CSNEX  &kp C_NEXT
+#define CSPRE  &kp C_PREV
+
+#define BOUT  &out OUT_TOG
+#define BOUU  &out OUT_USB
+#define BOUB  &out OUT_BLE
+
+#define CBRID &kp C_BRI_DN
+#define CBRIU &kp C_BRI_UP
+  
 / {
 macros {
   #define OS_LEAD  &kp RALT &kp U  // OS specific sequence to initialize unicode
@@ -118,10 +132,10 @@ macros {
     // -----------------------------------------------------------------------------------------
     raise_layer {
       bindings = <      
-        &trans  &bt BT_CLR    BT0  BT1  &bt BT_SEL 2  &kp C_MUTE      &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT  &kp C_PREV  &kp C_PP  &trans  
-        &trans  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &kp C_BRI_DN  &kp C_BRI_UP    &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT   &ntil     &trans
-        &trans  &kp GRAVE     &ntilup       &kp LT        &kp GT        &kp HOME        &qmkdn        &kp COLON     &kp SQT      &kp DQT     &accut    &trans
-                                                        &locks  &copies  &trans         &trans         &excldn     &pss
+        &trans  BTC   BT0   BT1   BT2    &kp C_MUTE             CVOLU  CVOLDN  CSPRE  CSNEX  &kp C_PP  &trans  
+        &trans  BOUT  BOUU  BOUB  CBRID  CBRIU                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &ntil  &trans
+        &trans  &kp GRAVE  &ntilup  &kp LT  &kp GT  &kp HOME    &qmkdn  &kp COLON  &kp SQT  &kp DQT  &accut &trans
+                         &locks  &copies  &trans                &trans         &excldn     &pss
       >;
     };
 
