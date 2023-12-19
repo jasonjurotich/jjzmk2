@@ -42,19 +42,50 @@ macros {
     wait-ms = <0>;
     tap-ms = <0>;
     bindings
-      = <&macro_press &kp LCTRL &kp LSHFT>
-      , <&macro_tap &kp U>
-      , <&macro_release &kp LCTRL &kp LSHFT>
-      , <&macro_tap &kp N0 &kp N0 &kp F &kp N1 &kp RET>
+      = <&macro_press &kp LALT>
+      , <&macro_tap &kp N>
+      , <&macro_release &kp LALT>
+      , <&macro_tap &kp N>
       ;    
   };
 
   ntilup: ntilup { 
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <5>;
-    tap-ms = <5>;
-    bindings = <OS_LEAD &kp N0 &kp N0 &kp D &kp 1 OS_TRAIL>;
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings
+      = <&macro_press &kp LALT &kp LSHFT>
+      , <&macro_tap &kp N>
+      , <&macro_release &kp LALT &kp LSHFT>
+      , <&macro_tap &kp N>
+      ;    
+  };
+
+  accut: accut { 
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings
+      = <&macro_press &kp LALT>
+      , <&macro_tap &kp E>
+      , <&macro_release &kp LALT>
+      , <&macro_tap &kp E>
+      ;    
+  };
+
+  excldn: excldn { 
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    tap-ms = <0>;
+    bindings
+      = <&macro_press &kp LALT>
+      , <&macro_tap &kp N1>
+      , <&macro_release &kp LALT>
+      , <&macro_tap &kp N1>
+      ;    
   };
 
   qmkdn: qmkdn {
@@ -63,22 +94,6 @@ macros {
     wait-ms = <5>;
     tap-ms = <5>;
     bindings = <OS_LEAD &kp 0 &kp 0 &kp B &kp F OS_TRAIL>;
-  };
-
-  excldn: excldn {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <5>;
-    tap-ms = <5>;
-    bindings = <OS_LEAD &kp 0 &kp 0 &kp A &kp 1 OS_TRAIL>;
-  };
-
-  accut: accut {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    wait-ms = <5>;
-    tap-ms = <5>;
-    bindings = <OS_LEAD &kp 0 &kp 0 &kp B &kp 4 OS_TRAIL>;
   };
 
   pss: pss {
@@ -149,8 +164,8 @@ macros {
     default_layer {
       bindings = <
        &none  &lt NAV Q         &kp W   &kp E  &kp R       &kp T       &kp Y  &kp U       &kp I      &kp O     &kp P          &none  
-       &none  &lt MED A     &kp S   &kp D  &lt NUM F   &kp G       &kp H  &lt NUM J   &kp K      &kp L     &lt MED ENTER  &none
-       &none  &mt LCTRL Z   &kp X   &kp C  &mt LALT V  &kp B       &kp N  &kp M       &kp COMMA  &kp DOT   &kp BSPC       &none
+       &none  &lt MED A     &kp S   &kp D  &lt NUM F   &kp G       &kp H  &lt NUM J   &kp K      &kp L     &lt MED BSPC       &none
+       &none  &mt LCTRL Z   &kp X   &kp C  &mt LALT V  &kp B       &kp N  &kp M       &kp COMMA  &kp DOT   &kp ENTER          &none
               &mt LCMD TAB  &mt LSHFT ESC     &none               &none  &mt RSHFT SPACE       &kp CAPS      
       >;
     };
