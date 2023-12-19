@@ -14,6 +14,7 @@
 #define NAV     2
 
 #define BT0  &bt BT_SEL 0
+#define BT1  &bt BT_SEL 1
 
 / {
 macros {
@@ -117,7 +118,7 @@ macros {
     // -----------------------------------------------------------------------------------------
     raise_layer {
       bindings = <      
-        &trans  &bt BT_CLR    BT0  &bt BT_SEL 1  &bt BT_SEL 2  &kp C_MUTE      &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT  &kp C_PREV  &kp C_PP  &trans  
+        &trans  &bt BT_CLR    BT0  BT1  &bt BT_SEL 2  &kp C_MUTE      &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT  &kp C_PREV  &kp C_PP  &trans  
         &trans  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &kp C_BRI_DN  &kp C_BRI_UP    &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT   &ntil     &trans
         &trans  &kp GRAVE     &ntilup       &kp LT        &kp GT        &kp HOME        &qmkdn        &kp COLON     &kp SQT      &kp DQT     &accut    &trans
                                                         &locks  &copies  &trans         &trans         &excldn     &pss
