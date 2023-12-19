@@ -115,8 +115,8 @@ macros {
     // -----------------------------------------------------------------------------------------
     raise_layer {
       bindings = <      
-        &trans  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &kp C_MUTE       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT  &kp C_PREV  &kp C_PP  &trans  
-        &trans  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans   &trans               &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT   &ntil     &trans
+        &trans  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp C_MUTE      &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT  &kp C_PREV  &kp C_PP  &trans  
+        &trans  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &kp C_BRI_DN  &kp C_BRI_UP    &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT   &ntil     &trans
         &trans  &trans        &trans &trans   &trans   &trans                           &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
                                                         &locks  &copies  &trans          &trans         &excldn     &pss
       >;
