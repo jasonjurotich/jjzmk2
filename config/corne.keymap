@@ -19,7 +19,7 @@
 #define BTC  &bt BT_CLR
 
 #define CVOLU  &kp C_VOL_UP
-#define CVOLU  &kp C_VOL_DN
+#define CVOLD  &kp C_VOL_DN
 #define CSNEX  &kp C_NEXT
 #define CSPRE  &kp C_PREV
 
@@ -132,7 +132,7 @@ macros {
     // -----------------------------------------------------------------------------------------
     raise_layer {
       bindings = <      
-        &trans  BTC   BT0   BT1   BT2    &kp C_MUTE             CVOLU  CVOLDN  CSPRE  CSNEX  &kp C_PP  &trans  
+        &trans  BTC   BT0   BT1   BT2    &kp C_MUTE             CVOLU  CVOLD  CSPRE  CSNEX  &kp C_PP  &trans  
         &trans  BOUT  BOUU  BOUB  CBRID  CBRIU                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &ntil  &trans
         &trans  &kp GRAVE  &ntilup  &kp LT  &kp GT  &kp HOME    &qmkdn  &kp COLON  &kp SQT  &kp DQT  &accut &trans
                          &locks  &copies  &trans                &trans         &excldn     &pss
