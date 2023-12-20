@@ -67,7 +67,7 @@ macros {
     tap-ms = <0>;
     bindings
       = <&macro_press &kp LALT>
-      , <&macro_tap &kp N0 &kp N0 &kp B &kp N4>
+      , <&macro_tap &kp N0 &kp N3 &kp N0 &kp N1>
       , <&macro_release &kp LALT>
       ;    
   };
