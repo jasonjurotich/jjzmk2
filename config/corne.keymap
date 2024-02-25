@@ -105,22 +105,28 @@ macros {
   pss: pss {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <5>;
-    tap-ms = <5>;
-    bindings = <&kp I &kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E &kp RET>;
+    wait-ms = <40>;
+    tap-ms = <40>;
+    bindings 
+        = <&kp I &kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E>
+        ;
   };
 
   pss2: pss2 {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <5>;
-    tap-ms = <5>;
-    bindings = <&kp LS(C) &kp A &kp M &kp P &kp N3 &kp S &kp T &kp R &kp N3 &kp N9 &kp DLLR &kp DLLR &kp RET>;
+    wait-ms = <40>;
+    tap-ms = <40>;
+    bindings 
+        = <&kp LS(C) &kp A &kp M &kp P &kp N3 &kp S &kp T &kp R &kp N3 &kp N9 &kp DLLR &kp DLLR>
+        ;
   };
 
   locks: locks {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
+    wait-ms = <5>;
+    tap-ms = <5>;
     bindings
         = <&macro_press &kp LCTRL &kp LGUI>
         , <&macro_tap &kp Q>
@@ -211,10 +217,11 @@ macros {
       bindings = <      
         TR  BT0  BT1  BT2  BT3  BTC        TR  TR  TR  TR  TR  TR  
         TR  BTCA  TR  TR  BTP  BTN         &spacl  TR  &spacu  &spacr  TR  TR
-        TR  BOUT  BOUU  BOUB  TR  TR       &copies  TR  TR  TR  TR  TR
-        TR  TR  TR  TR  TR  TR             &locks  &pss  &pss2
+        TR  BOUT  BOUU  BOUB  TR  TR       &copies  &pss  &pss2  &locks  TR  TR
+        TR  TR  TR  TR  TR  TR             TR  TR  TR
       >;
     };
 
   };
 };
+             
