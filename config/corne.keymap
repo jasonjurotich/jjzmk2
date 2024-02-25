@@ -15,8 +15,6 @@
 #define NAV     3
 
 
-#define NO  &none
-#define TR  &trans
 
 #define BT0  &bt BT_SEL 0
 #define BT1  &bt BT_SEL 1
@@ -27,6 +25,8 @@
 #define BTC  &bt BT_CLR
 #define BTCA  &bt BT_CLR_ALL
 
+#define NO  &none
+#define TR  &trans
 #define CVOLU  &kp C_VOL_UP
 #define CVOLD  &kp C_VOL_DN
 #define CSNEX  &kp C_NEXT
