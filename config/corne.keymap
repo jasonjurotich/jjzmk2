@@ -107,10 +107,7 @@ macros {
     #binding-cells = <0>;
     wait-ms = <5>;
     tap-ms = <5>;
-    bindings 
-        = <&kp I &kp P &kp S &kp U &kp M >
-        , <&kp E &kp S &kp S &kp E &kp RET>
-        ;
+    bindings = <&kp I &kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E &kp RET>;
   };
 
   pss2: pss2 {
@@ -118,10 +115,7 @@ macros {
     #binding-cells = <0>;
     wait-ms = <5>;
     tap-ms = <5>;
-    bindings 
-        = <&kp LS(C) &kp A &kp M &kp P &kp N3 &kp S &kp T >
-        , <&kp R &kp N3 &kp N9 &kp DLLR &kp DLLR &kp RET>
-        ;
+    bindings = <&kp LS(C) &kp A &kp M &kp P &kp N3 &kp S &kp T &kp R &kp N3 &kp N9 &kp DLLR &kp DLLR &kp RET>;
   };
 
   locks: locks {
@@ -217,8 +211,8 @@ macros {
       bindings = <      
         TR  BT0  BT1  BT2  BT3  BTC        TR  TR  TR  TR  TR  TR  
         TR  BTCA  TR  TR  BTP  BTN         &spacl  TR  &spacu  &spacr  TR  TR
-        TR  BOUT  BOUU  BOUB  TR  TR       TR  TR  TR  TR  TR TR
-        TR  TR  TR  TR  TR  TR             TR  &pss  &pss2
+        TR  BOUT  BOUU  BOUB  TR  TR       &copies  TR  TR  TR  TR  TR
+        TR  TR  TR  TR  TR  TR             &locks  &pss  &pss2
       >;
     };
 
