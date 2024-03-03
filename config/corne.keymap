@@ -105,8 +105,8 @@ macros {
   pss: pss {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <40>;
-    tap-ms = <40>;
+    wait-ms = <30>;
+    tap-ms = <30>;
     bindings 
         = <&kp I &kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E>
         ;
@@ -115,8 +115,8 @@ macros {
   pss2: pss2 {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <40>;
-    tap-ms = <40>;
+    wait-ms = <30>;
+    tap-ms = <30>;
     bindings 
         = <&kp LS(C) &kp A &kp M &kp P &kp N3 &kp S &kp T &kp R &kp N3 &kp N9 &kp DLLR &kp DLLR>
         ;
@@ -185,30 +185,41 @@ macros {
     // -----------------------------------------------------------------------------------------
     default_layer {
       bindings = <
-       NO  &lt NAV Q  &kp W  &kp E  &kp R  &kp T          &kp Y  &kp U  &kp I  &kp O  &lt NAV P  NO  
-       NO  &lt MED A  &kp S  &kp D  &lt NUM F  &kp G      &kp H  &lt NUM J  &kp K  &kp L  &lt MED BSPC  NO
-       NO  &mt LCTRL Z  &kp X  &kp C  &mt LALT V  &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &mt LCTRL ENTER  NO
-       &mt LCMD TAB  &mt LSHFT ESC  NO                    NO  &mt RSHFT SPACE  &kp CAPS
+       NO  &lt NAV Q    &kp W  &kp E  &lt PRO R   &kp T     &kp Y  &lt PRO U  &kp I       &kp O    &lt NAV P        NO  
+       NO  &lt MED A    &kp S  &kp D  &lt NUM F   &kp G     &kp H  &lt NUM J  &kp K       &kp L    &lt MED BSPC     NO
+       NO  &mt LCTRL Z  &kp X  &kp C  &mt LALT V  &kp B     &kp N  &kp M      &kp COMMA   &kp DOT  &mt LCTRL ENTER  NO
+       &mt LCMD TAB  &mt LSHFT ESC  NO                      NO     &mt RSHFT SPACE  &kp CAPS
       >;
     };
 
     // -----------------------------------------------------------------------------------------
     num_layer {
       bindings = <
-       TR  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT       &kp N7  &kp N8  &kp N9  &kp N0  &kp STAR  TR
-       TR  &kp AMPS  &kp PIPE  &kp TILDE  &kp LPAR  &kp RPAR     &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS  TR
-       TR  &kp UNDER  &kp BSLH  &kp CARET  &kp LBKT  &kp RBKT    &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp FSLH  TR
-       &kp LBRC  &kp RBRC  TR                                    TR  &kp QMARK  &kp SEMI      
+       TR  &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp N7  &kp N8   &kp N9  &kp FSLH   &kp STAR   TR
+       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS  &kp STAR     &kp N4  &kp N5   &kp N6  &kp MINUS  &kp BSPC   TR
+       TR  TR         TR         TR         TR        TR           &kp N1  &kp N2   &kp N3  &kp PLUS   &kp ENTER  TR
+       TR  TR         TR                                           &kp N0  &kp DOT  &kp EQUAL     
       >;
     };
 
     // -----------------------------------------------------------------------------------------
+    prog_layer {
+      bindings = <
+       TR  &excldn  &kp PIPE  TR  TR  TR      &kp LPAR   &kp RPAR   &kp UNDER  &kp EQUAL  &kp BSLH  TR
+       TR  &kp LT   &kp GT    TR  TR  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT   TR
+       TR  TR       TR        TR  TR  TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT   TR
+       TR  TR       TR                        TR         TR         TR
+      >;
+    };
+
+
+    // -----------------------------------------------------------------------------------------
     med_layer {
       bindings = <      
-        TR  &excldn  TR  TR  TR  TR                        CVOLU  CVOLD  CSPRE  CSNEX  &kp C_PP  TR  
-        TR  TR  TR  TR  CBRID  CBRIU                       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &ntil  TR
-        TR  &kp GRAVE  &ntilup  &kp LT  &kp GT  &kp HOME   TR  &kp COLON  &kp SQT  &kp DQT  &accut   TR
-        &locks  &copies  TR                                TR  &qmkdn  TR
+        TR      TR  TR   TR  TR     TR          CVOLU     CVOLD     CSPRE   CSNEX      &kp C_PP  TR  
+        TR      TR  TR   TR  CBRID  CBRIU       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &ntil     TR
+        TR      TR  TR   TR  TR     TR          TR        TR        TR      &accut     &ntilup   TR
+        &locks  &copies  TR                     TR        TR        TR
       >;
     };
 
