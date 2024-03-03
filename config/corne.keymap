@@ -216,7 +216,7 @@ macros {
     // -----------------------------------------------------------------------------------------
     nav_layer {
       bindings = <      
-        TR      TR  TR   TR  TR     TR          TR  TR  TR  TR  TR  TR   
+        TR      TR  TR   TR  TR     TR          &spacl    TR        &spacu  &spacr     TR        TR   
         TR      TR  TR   TR  CBRID  CBRIU       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &ntil     TR
         TR      TR  TR   TR  TR     TR          TR        TR        TR      &accut     &ntilup   TR
         &locks  &copies  TR                     TR        TR        TR
@@ -227,7 +227,7 @@ macros {
     med_layer {
       bindings = <      
         TR  BT0  BT1  BT2  BT3  BTC        CVOLU     CVOLD     CSPRE   CSNEX      &kp C_PP  TR 
-        TR  BTCA  TR  TR  BTP  BTN         &spacl  TR  &spacu  &spacr  TR  TR
+        TR  BTCA  TR  TR  BTP  BTN         TR  TR  TR  TR  TR  TR
         TR  BOUT  BOUU  BOUB  TR  TR       &copies  &pss  &pss2  &locks  TR  TR
         TR  TR  TR  TR  TR  TR             TR  TR  TR
       >;
