@@ -225,10 +225,10 @@ macros {
     // -----------------------------------------------------------------------------------------
     nav_layer {
       bindings = <      
-        TR  TR  TR  TR  TR     TR          TR      TR  TR      TR      TR       TR   
-        TR  TR  TR  TR  CBRID  CBRIU       &spacl  TR  &spacu  &spacr  TR       TR
-        TR  TR  TR  TR  TR     TR          TR      TR  TR      &accut  &ntilup  TR
-        TR  TR  TR                         TR      TR  TR
+        TR  TR  TR  TR  TR  TR       TR      TR  TR      CBRID   CBRIU    TR   
+        TR  TR  TR  TR  TR  TR       &spacl  TR  &spacu  &spacr  TR       TR
+        TR  TR  TR  TR  TR  TR       TR      TR  TR      &accut  &ntilup  TR
+        TR  TR  TR                   TR      TR  TR
       >;
     };
 
