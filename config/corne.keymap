@@ -206,10 +206,10 @@ macros {
     // -----------------------------------------------------------------------------------------
     prog_layer {
       bindings = <
-       TR  &excldn  &kp PIPE  TR  TR  TR      &kp LPAR   &kp RPAR   &kp UNDER  &kp EQUAL  &kp BSLH  TR
-       TR  &kp LT   &kp GT    TR  TR  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT   TR
-       TR  TR       TR        TR  TR  TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT   TR
-       TR  TR       TR                        TR         TR         TR
+       TR  &excldn  &kp PIPE  TR  TR         TR      &kp LPAR   &kp RPAR   &kp UNDER  &kp EQUAL  &kp BSLH  TR
+       TR  &kp LT   &kp GT    TR  &kp GRAVE  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT   TR
+       TR  TR       TR        TR  TR         TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT   TR
+       TR  TR       TR                               TR         TR         TR
       >;
     };
 
@@ -217,8 +217,8 @@ macros {
     med_layer {
       bindings = <      
         TR  BT0   BT1   BT2   BT3  BTC      CVOLU     CVOLD     CSPRE    CSNEX      &kp C_PP  TR 
-        TR  BTCA  TR    TR    BTP  BTN      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &ntil     TR
-        TR  BOUT  BOUU  BOUB  TR   TR       &pss      &pss2     &copies  &locks     TR        TR
+        TR  BTCA  TR    TR    BTP  BTN      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &accut    TR
+        TR  BOUT  BOUU  BOUB  TR   TR       &pss      &pss2     &copies  &locks     &ntil     TR
         TR  TR    TR                        TR        TR        TR
       >;
     };
@@ -226,10 +226,10 @@ macros {
     // -----------------------------------------------------------------------------------------
     nav_layer {
       bindings = <      
-        TR  TR  TR  TR  TR  TR       TR      TR  TR      CBRID   CBRIU    TR   
-        TR  TR  TR  TR  TR  TR       &spacl  TR  &spacu  &spacr  TR       TR
-        TR  TR  TR  TR  TR  TR       TR      TR  TR      &accut  &ntilup  TR
-        TR  TR  TR                   TR      TR  TR
+        TR  &kp TAB  TR  TR  TR  TR           TR      TR  TR      CBRID   CBRIU    TR   
+        TR  TR       TR  TR  TR  TR           &spacl  TR  &spacu  &spacr  TR       TR
+        TR  TR       TR  TR  TR  TR           TR      TR  TR      TR      &ntilup  TR
+        TR  TR       TR                       TR      TR  TR
       >;
     };
 
