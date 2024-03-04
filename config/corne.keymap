@@ -185,8 +185,8 @@ macros {
     // -----------------------------------------------------------------------------------------
     default_layer {
       bindings = <
-       NO  &lt NAV Q    &kp W  &kp E  &lt PRO R   &kp T     &kp Y  &lt PRO U  &kp I       &kp O    &lt NAV P        NO  
-       NO  &lt MED A    &kp S  &kp D  &lt NUM F   &kp G     &kp H  &lt NUM J  &kp K       &kp L    &lt MED BSPC     NO
+       NO  &lt NAV Q    &kp W  &kp E  &lt NUM R   &kp T     &kp Y  &lt NUM U  &kp I       &kp O    &lt NAV P        NO  
+       NO  &lt MED A    &kp S  &kp D  &lt PRO F   &kp G     &kp H  &lt PRO J  &kp K       &kp L    &lt MED BSPC     NO
        NO  &mt LCTRL Z  &kp X  &kp C  &mt LALT V  &kp B     &kp N  &kp M      &kp COMMA   &kp DOT  &mt LCTRL ENTER  NO
        &mt LCMD TAB  &mt LSHFT ESC  NO                      NO     &mt RSHFT SPACE  &kp CAPS
       >;
@@ -212,24 +212,23 @@ macros {
       >;
     };
 
-
     // -----------------------------------------------------------------------------------------
-    nav_layer {
+    med_layer {
       bindings = <      
-        TR      TR  TR   TR  TR     TR          &spacl    TR        &spacu  &spacr     TR        TR   
-        TR      TR  TR   TR  CBRID  CBRIU       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &ntil     TR
-        TR      TR  TR   TR  TR     TR          TR        TR        TR      &accut     &ntilup   TR
-        &locks  &copies  TR                     TR        TR        TR
+        TR  BT0   BT1   BT2   BT3  BTC      CVOLU     CVOLD     CSPRE    CSNEX      &kp C_PP  TR 
+        TR  BTCA  TR    TR    BTP  BTN      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &ntil     TR
+        TR  BOUT  BOUU  BOUB  TR   TR       &pss      &pss2     &copies  &locks     TR        TR
+        TR  TR    TR                        TR        TR        TR
       >;
     };
 
     // -----------------------------------------------------------------------------------------
-    med_layer {
+    nav_layer {
       bindings = <      
-        TR  BT0   BT1   BT2   BT3  BTC      CVOLU    CVOLD  CSPRE  CSNEX   &kp C_PP  TR 
-        TR  BTCA  TR    TR    BTP  BTN      TR       TR     TR     TR      TR        TR
-        TR  BOUT  BOUU  BOUB  TR   TR       &copies  &pss   &pss2  &locks  TR        TR
-        TR  TR    TR                        TR       TR     TR
+        TR  TR  TR  TR  TR     TR          TR      TR  TR      TR      TR       TR   
+        TR  TR  TR  TR  CBRID  CBRIU       &spacl  TR  &spacu  &spacr  TR       TR
+        TR  TR  TR  TR  TR     TR          TR      TR  TR      &accut  &ntilup  TR
+        TR  TR  TR                         TR      TR  TR
       >;
     };
 
