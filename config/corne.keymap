@@ -11,8 +11,9 @@
 
 #define DEF     0
 #define NUM     1
-#define MED     2
-#define NAV     3
+#define PRO     2
+#define MED     3
+#define NAV     4
 
 #define BT0  &bt BT_SEL 0
 #define BT1  &bt BT_SEL 1
