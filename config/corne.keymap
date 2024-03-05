@@ -189,7 +189,7 @@ macros {
        NO  &lt NAV Q    &kp W  &kp E  &lt NUM R   &kp T     &kp Y  &lt NUM U  &kp I       &kp O    &lt NAV P        NO  
        NO  &lt MED A    &kp S  &kp D  &lt PRO F   &kp G     &kp H  &lt PRO J  &kp K       &kp L    &lt MED BSPC     NO
        NO  &mt LCTRL Z  &kp X  &kp C  &mt LALT V  &kp B     &kp N  &kp M      &kp COMMA   &kp DOT  &mt LCTRL ENTER  NO
-       &mt LCMD TAB  &mt LSHFT ESC  NO                      NO     &mt RSHFT SPACE  &kp CAPS
+       &mt LCMD TAB  &mt LSHFT ESC  &kp ESC                 &kp SPACE  &mt RSHFT SPACE  &kp CAPS
       >;
     };
 
@@ -209,7 +209,7 @@ macros {
        TR  &excldn  &kp PIPE  TR  TR         TR      &kp LPAR   &kp RPAR   &kp UNDER  &kp BSLH   &kp EQUAL  TR
        TR  &kp LT   &kp GT    TR  &kp GRAVE  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT    TR
        TR  TR       TR        TR  TR         TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT    TR
-       TR  TR       TR                               TR         TR         TR
+       TR  TR       TR                               &kp SPACE         TR         TR
       >;
     };
 
@@ -219,7 +219,7 @@ macros {
         TR  BT0   BT1   BT2   BT3  BTC      CVOLU     CVOLD     CSPRE    CSNEX      &kp C_PP  TR 
         TR  BTCA  TR    TR    BTP  BTN      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &accut    TR
         TR  BOUT  BOUU  BOUB  TR   TR       &pss      &pss2     &copies  &locks     &ntil     TR
-        TR  TR    TR                        TR        TR        TR
+        TR  TR    TR                        &kp SPACE        TR        TR
       >;
     };
 
@@ -227,9 +227,9 @@ macros {
     nav_layer {
       bindings = <      
         TR  &kp TAB  TR  TR  TR  TR           TR      TR  TR      CBRID   CBRIU    TR   
-        TR  TR       TR  TR  TR  TR           &spacl  TR  &spacu  &spacr  TR       TR
+        TR  &kp ESC  TR  TR  TR  TR           &spacl  TR  &spacu  &spacr  TR       TR
         TR  TR       TR  TR  TR  TR           TR      TR  TR      TR      &ntilup  TR
-        TR  TR       TR                       TR      TR  TR
+        TR  TR       TR                       &kp SPACE      TR  TR
       >;
     };
 
