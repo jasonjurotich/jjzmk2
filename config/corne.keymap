@@ -217,10 +217,10 @@ macros {
     // -----------------------------------------------------------------------------------------
     prog_layer {
       bindings = <
-       TR  &excldn  &kp PIPE  TR  TR         TR      &kp LPAR   &kp RPAR   &kp UNDER  &kp BSLH   &kp EQUAL  TR
-       TR  &kp LT   &kp GT    TR  &kp GRAVE  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT    TR
-       TR  TR       TR        TR  TR         TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT    TR
-       TR  TR       TR                               &kp SPACE         TR         TR
+       TR  &excldn    &kp PIPE  TR      TR      TR      &kp LPAR   &kp RPAR   &kp UNDER  &kp BSLH   &kp EQUAL  TR
+       TR  &kp GRAVE  TR        &kp LT  &kp GT  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT    TR
+       TR  TR         TR        TR      TR      TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT    TR
+       TR  TR         TR                                &kp SPACE  TR         TR
       >;
     };
 
