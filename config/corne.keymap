@@ -9,12 +9,32 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors/mouse_keys.dtsi>
+#include <behaviors/mouse_move.dtsi>
+
+&mmv {
+    acceleration-exponent = <1>;      // 1
+    time-to-max-speed-ms = <500>;     // 300
+    delay-ms = <0>;                   // 0
+};
+
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <40>;      // 300
+    delay-ms = <0>;                   // 0
+};
+
 #define DEF     0
 #define NUM     1
 #define PRO     2
 #define MED     3
 #define NAV     4
-#define BLUZ    5
+#define BLU     5
+#define MSE     6
 
 #define BT0  &bt BT_SEL 0
 #define BT1  &bt BT_SEL 1
@@ -27,6 +47,7 @@
 
 #define NO  &none
 #define TR  &trans
+
 #define CVOLU  &kp C_VOL_UP
 #define CVOLD  &kp C_VOL_DN
 #define CSNEX  &kp C_NEXT
@@ -196,6 +217,7 @@ macros {
 
     // -----------------------------------------------------------------------------------------
     default_layer {
+      display-name = "DEF";
       bindings = <
        NO  &lt NAV Q    &kp W  &kp E   &lt NUM R     &kp T     &kp Y  &lt NUM U  &kp I       &kp O    &lt NAV P        NO  
        NO  &lt MED A    &kp S  &kp D   &lt PRO F     &kp G     &kp H  &lt PRO J  &kp K       &kp L    &lt MED BSPC     NO
@@ -206,6 +228,7 @@ macros {
 
     // -----------------------------------------------------------------------------------------
     num_layer {
+      display-name = "NUM";
       bindings = <
        TR  &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp N7  &kp N8   &kp N9  &kp FSLH   &kp STAR   TR
        TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS  &kp STAR     &kp N4  &kp N5   &kp N6  &kp MINUS  &kp BSPC   TR
@@ -216,6 +239,7 @@ macros {
 
     // -----------------------------------------------------------------------------------------
     prog_layer {
+      display-name = "PRO";
       bindings = <
        TR  &excldn    &kp PIPE  TR      TR      TR      &kp LPAR   &kp RPAR   &kp UNDER  &kp BSLH   &kp EQUAL  TR
        TR  &kp GRAVE  TR        &kp LT  &kp GT  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT    TR
@@ -226,6 +250,7 @@ macros {
 
     // -----------------------------------------------------------------------------------------
     med_layer {
+      display-name = "MED";
       bindings = <      
         TR  TR  TR  TR  TR  TR      CVOLU     CVOLD     CSPRE    CSNEX      &kp C_PP  TR 
         TR  TR  TR  TR  TR  TR      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &accut    TR
@@ -236,6 +261,7 @@ macros {
 
     // -----------------------------------------------------------------------------------------
     nav_layer {
+      display-name = "NAV";
       bindings = <      
         TR  &kp TAB  TR  TR  TR  TR           TR      TR  TR      CBRID   CBRIU    TR   
         TR  &kp ESC  TR  TR  TR  TR           &spacl  TR  &spacu  &spacr  TR       TR
@@ -245,7 +271,19 @@ macros {
     };
 
     // -----------------------------------------------------------------------------------------
-    bluz_layer {
+    blu_layer {
+      display-name = "BLU";
+      bindings = <      
+        TR  BT0   BT1   BT2   BT3  BTC      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR  TR
+        TR  BTCA  TR    TR    BTP  BTN      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT TR  TR
+        TR  BOUT  BOUU  BOUB  TR   TR       TR  &mkp LCLK  &mkp MCLK  &mkp RCLK  TR  TR
+        TR  TR    TR                        TR  TR  TR
+      >;
+    };
+
+    // -----------------------------------------------------------------------------------------
+    mse_layer {
+      display-name = "MSE";
       bindings = <      
         TR  BT0   BT1   BT2   BT3  BTC      TR  TR  TR  TR  TR  TR 
         TR  BTCA  TR    TR    BTP  BTN      TR  TR  TR  TR  TR  TR
