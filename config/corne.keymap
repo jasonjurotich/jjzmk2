@@ -274,9 +274,9 @@ macros {
     blu_layer {
       display-name = "BLU";
       bindings = <      
-        TR  BT0   BT1   BT2   BT3  BTC      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR  TR
-        TR  BTCA  TR    TR    BTP  BTN      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT TR  TR
-        TR  BOUT  BOUU  BOUB  TR   TR       TR  &mkp LCLK  &mkp MCLK  &mkp RCLK  TR  TR
+        TR  BT0   BT1   BT2   BT3  BTC      TR  TR  TR  TR  TR  TR
+        TR  BTCA  TR    TR    BTP  BTN      TR  TR  TR  TR  TR  TR
+        TR  BOUT  BOUU  BOUB  TR   TR       TR  TR  TR  TR  TR  TR
         TR  TR    TR                        TR  TR  TR
       >;
     };
@@ -285,10 +285,10 @@ macros {
     mse_layer {
       display-name = "MSE";
       bindings = <      
-        TR  BT0   BT1   BT2   BT3  BTC      TR  TR  TR  TR  TR  TR 
-        TR  BTCA  TR    TR    BTP  BTN      TR  TR  TR  TR  TR  TR
-        TR  BOUT  BOUU  BOUB  TR   TR       TR  TR  TR  TR  TR  TR
-        TR  TR    TR                        TR  TR  TR
+        TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR  TR
+        TR  TR  TR  TR  TR  TR      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT TR  TR
+        TR  TR  TR  TR  TR  TR      &mkp LCLK  &mkp MCLK  &mkp RCLK  TR  TR
+        TR  TR    TR                TR  TR  TR
       >;
     };
 
