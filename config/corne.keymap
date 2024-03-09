@@ -58,6 +58,10 @@
 
 #define CBRID &kp C_BRI_DN
 #define CBRIU &kp C_BRI_UP
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC>;
+};
   
 / {
 macros {
@@ -254,7 +258,7 @@ macros {
         TR  TR  TR  TR  TR  TR      CVOLD      CVOLU     CSPRE    CSNEX      &kp C_PP  TR 
         TR  TR  TR  TR  TR  TR      &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT  &accut    TR
         TR  TR  TR  TR  TR  TR      &pss       &pss2     &copies  &locks     &ntil     TR
-        TR  TR    TR                &kp SPACE            TR       TR
+        TR  TR    TR                &kp SPACE  &kp CAPS  TR
       >;
     };
 
