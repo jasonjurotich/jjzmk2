@@ -284,8 +284,8 @@ macros {
     mse_layer {
       display-name = "MSE";
       bindings = <      
-        TR  TR  TR  TR  TR  TR      TR  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR
-        TR  TR  TR  TR  TR  TR      TR  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT TR
+        TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR TR
+        TR  TR  TR  TR  TR  TR      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT TR TR
         TR  TR  TR  TR  TR  TR      TR  &mkp RCLK  TR  TR  TR
         TR  TR    TR                &mkp LCLK  &mkp RCLK  TR
       >;
