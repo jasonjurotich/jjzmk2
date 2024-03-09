@@ -222,7 +222,7 @@ macros {
        NO  &lt NAV Q    &kp W  &kp E   &lt NUM R     &kp T         &kp Y  &lt NUM U  &kp I       &kp O    &lt NAV P        NO  
        NO  &lt MED A    &kp S  &kp D   &lt PRO F     &lt MSE G     &kp H  &lt PRO J  &kp K       &kp L    &lt MED BSPC     NO
        NO  &mt LCTRL Z  &kp X  &kp C   &mt LALT V    &kp B         &kp N  &kp M      &kp COMMA   &kp DOT  &mt LCTRL ENTER  NO
-       &mo BLUZ         &mt LSHFT TAB  &mt LCMD ESC                &mt RSHFT SPACE   &mt RSHFT SPACE      &kp CAPS
+       &mo BLU         &mt LSHFT TAB  &mt LCMD ESC                &mt RSHFT SPACE   &mt RSHFT SPACE      &kp CAPS
       >;
     };
 
