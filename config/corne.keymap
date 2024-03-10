@@ -285,7 +285,7 @@ macros {
     blu_layer {
       display-name = "BLU";
       bindings = <      
-        TR  BT0   BT1   BT2   BT3  BTC      TR  TR  TR  TR  TR  TR
+        TR  BT0   BT1   BT2   BT3  BTC      BTC  BT3  BT2  BT1  BT0  TR
         TR  BTCA  TR    TR    BTP  BTN      TR  TR  TR  TR  TR  TR
         TR  BOUT  BOUU  BOUB  TR   TR       TR  TR  TR  TR  TR  TR
         TR  TR    TR                        TR  TR  TR
