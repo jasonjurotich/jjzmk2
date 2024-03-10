@@ -233,10 +233,10 @@ macros {
     num_layer {
       display-name = "NUM";
       bindings = <
-       TR  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp N7  &kp N8   &kp N9  &kp FSLH   &kp MINUS   TR
-       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp N4  &kp N5   &kp N6  &kp STAR   &kp BSPC   TR
-       TR  TR         TR         TR         &kp EQUAL  TR           &kp N1  &kp N2   &kp N3  &kp PLUS   &kp ENTER  TR
-       TR  TR         TR                                            &kp N0  &kp DOT  TR     
+       TR  &excldn   &kp AT     &kp HASH    &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp FSLH  TR
+       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp BSPC   TR
+       TR  TR         TR         TR         TR         TR           &kp PLUS   &kp N1  &kp N2  &kp N3  &kp ENTER  TR
+       TR  TR         TR                                            TR         &kp N0  TR     
       >;
     };
 
@@ -244,10 +244,10 @@ macros {
     prog_layer {
       display-name = "PRO";
       bindings = <
-       TR  &excldn    &kp PIPE  TR      TR      TR      &kp LPAR   &kp RPAR   &kp EQUAL  &kp BSLH   &kp UNDER  TR
-       TR  &kp GRAVE  TR        &kp LT  &kp GT  TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT    TR
-       TR  TR         TR        TR      TR      TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT    TR
-       TR  TR         TR                                &kp SPACE  TR         TR
+       TR  &kp EXCL   &kp PIPE  TR      TR         TR      &kp UNDER  &kp LPAR   &kp RPAR   &kp AMPS   &kp BSLH   TR
+       TR  &kp GRAVE  TR        &kp LT  &kp GT     TR      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT    TR
+       TR  TR         TR        TR      &kp EQUAL  TR      &kp COLON  &kp SEMI   &qmkdn     &kp QMARK  &kp SQT    TR
+       TR  TR         TR                                   &kp SPACE  &kp CAPS   TR
       >;
     };
 
@@ -258,7 +258,7 @@ macros {
         TR  TR  TR  TR  TR  TR      CVOLD      CVOLU     CSPRE    CSNEX      &kp C_PP  TR 
         TR  TR  TR  TR  TR  TR      &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT  &accut    TR
         TR  TR  TR  TR  TR  TR      &pss       &pss2     &copies  &locks     &ntil     TR
-        TR  TR    TR                &kp SPACE  &kp CAPS  TR
+        TR  TR    TR                &kp SPACE  NO        TR
       >;
     };
 
