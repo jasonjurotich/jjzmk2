@@ -284,7 +284,7 @@ macros {
     nav_layer {
       display-name = "NAV";
       bindings = <      
-        TR  &kp TAB  TR  TR  TR  TR           CBRID      CBRIU      CSPRE    CSNEX    TR   
+        TR  &kp TAB  TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    TR       TR  
         TR  &kp ESC  TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   TR       TR
         TR  TR       TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup  TR
         TR  TR       TR                       &kp SPACE  TR         TR
