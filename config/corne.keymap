@@ -180,22 +180,32 @@ macros {
         ;
   };
 
-  capss: capss {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings
-        = <&macro_press &kp ESC>
-        , <&macro_tap &kp ENTER>
-        , <&macro_release &kp ESC>
-        ;
-  };
-
   spacu: spacu {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
         = <&macro_press &kp LCTRL>
         , <&macro_tap &kp UP>
+        , <&macro_release &kp LCTRL>
+        ;
+  };
+
+  lbegin: lbegin {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_tap &kp A>
+        , <&macro_release &kp LCTRL>
+        ;
+  };
+
+  lend: lend {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_tap &kp E>
         , <&macro_release &kp LCTRL>
         ;
   };
@@ -263,7 +273,7 @@ macros {
     med_layer {
       display-name = "MED";
       bindings = <      
-        TR  TR  TR  TR  TR  TR      CVOLD      CVOLU     CSPRE    CSNEX      &kp C_PP  TR 
+        TR  TR  TR  TR  TR  TR      &lbegin    &lend     CVOLD    CVOLU      &kp C_PP  TR 
         TR  TR  TR  TR  TR  TR      &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT  &accut    TR
         TR  TR  TR  TR  TR  TR      &pss       &pss2     &copies  &locks     &ntil     TR
         TR  TR    TR                &kp SPACE  NO        TR
@@ -274,7 +284,7 @@ macros {
     nav_layer {
       display-name = "NAV";
       bindings = <      
-        TR  &kp TAB  TR  TR  TR  TR           TR         CBRID      CBRIU      TR       TR       TR   
+        TR  &kp TAB  TR  TR  TR  TR           CBRID      CBRIU      CSPRE    CSNEX    TR   
         TR  &kp ESC  TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   TR       TR
         TR  TR       TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup  TR
         TR  TR       TR                       &kp SPACE  TR         TR
