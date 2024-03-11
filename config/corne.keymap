@@ -253,7 +253,7 @@ macros {
       bindings = <
        TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH  TR
        TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp BSPC   TR
-       TR  TR         TR         TR         TR         TR           &kp PLUS   &kp N1  &kp N2  &kp N3  &kp ENTER  TR
+       TR  TR         TR         TR         TR         &kp PLUS     &kp COLON  &kp N1  &kp N2  &kp N3  &kp ENTER  TR
        TR  TR         TR                                            TR         &kp N0  TR     
       >;
     };
