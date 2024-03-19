@@ -240,7 +240,7 @@ macros {
     default_layer {
       display-name = "DEF";
       bindings = <
-       NO  &lt NAV Q    &kp W  &kp E       &lt NUM R  &kp T            &kp Y  &lt NUM U  &kp I       &kp O    &lt NAV P        NO  
+       NO  &lt NAV Q    &kp W  &kp E       &lt NUM R  &kp T            &kp Y  &lt NUM U  &kp I       &kp O    &kp P        NO  
        NO  &lt MED A    &kp S  &kp D       &lt PRO F  &lt MSE G        &kp H  &lt PRO J  &kp K       &kp L    &lt MED ENTER     NO
        NO  &mt LCTRL Z  &kp X  &lt MSE C   &mt LALT V &lt MSE B        &kp N  &kp M      &kp COMMA   &kp DOT  &mt LCTRL BSPC  NO
        NO  &mt LSHFT ESC      &mt LCMD TAB                             &mt RSHFT SPACE   &mt RSHFT SPACE  NO
@@ -284,8 +284,8 @@ macros {
     nav_layer {
       display-name = "NAV";
       bindings = <      
-        TR  &kp TAB  TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    TR       TR  
-        TR  &kp ESC  TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   &kp BSPC   TR
+        TR  TR       TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    TR       TR  
+        TR  TR       TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   &kp BSPC   TR
         TR  TR       TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup  TR
         TR  TR       TR                       &kp SPACE  TR         TR
       >;
