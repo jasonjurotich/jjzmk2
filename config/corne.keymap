@@ -3,6 +3,8 @@
  *
  * SPDX-License-Identifier: MIT
  */
+ // https://github.com/duckyb/zmk-sweep?tab=readme-ov-file
+ // https://github.com/duckyb/urchin
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -240,10 +242,10 @@ macros {
     default_layer {
       display-name = "DEF";
       bindings = <
-       NO  &lt NAV Q    &kp W  &kp E       &lt NUM R  &kp T            &kp Y  &lt NUM U  &kp I       &kp O    &kp P        NO  
-       NO  &lt MED A    &kp S  &kp D       &lt PRO F  &lt MSE G        &kp H  &lt PRO J  &kp K       &kp L    &lt MED ENTER     NO
-       NO  &mt LCTRL Z  &kp X  &lt MSE C   &mt LALT V &lt MSE B        &kp N  &kp M      &kp COMMA   &kp DOT  &mt LCTRL BSPC  NO
-       NO  &mt LSHFT ESC      &mt LCMD TAB                             &mt RSHFT SPACE   &mt RSHFT SPACE  NO
+       NO  &lt NAV Q    &kp W      &kp E      &lt NUM R  &kp T        &kp Y  &lt NUM U   &kp I       &kp O    &kp P           NO  
+       NO  &lt MED A    &kp S      &kp D      &lt PRO F  &kp G        &kp H  &lt PRO J   &kp K       &kp L    &lt MED ENTER   NO
+       NO  &mt LCTRL Z  &lt MSE X  &lt MSE C  &mt LALT V &kp B        &kp N  &lt LALT M  &kp COMMA   &kp DOT  &mt LCTRL BSPC  NO
+       NO  &mt LSHFT ESC      &mt LCMD TAB                            &mt RSHFT SPACE   &mt RSHFT SPACE  NO
       >;
     };
 
@@ -251,9 +253,9 @@ macros {
     num_layer {
       display-name = "NUM";
       bindings = <
-       TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH  TR
-       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp ENTER   TR
-       TR  TR         TR         TR         TR         &kp PLUS     &kp COLON  &kp N1  &kp N2  &kp N3  &kp BSPC  TR
+       TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH   TR
+       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp ENTER  TR
+       TR  TR         TR         TR         TR         &kp PLUS     &kp COLON  &kp N1  &kp N2  &kp N3  &kp BSPC   TR
        TR  TR         TR                                            TR         &kp N0  TR     
       >;
     };
@@ -284,9 +286,9 @@ macros {
     nav_layer {
       display-name = "NAV";
       bindings = <      
-        TR  TR       TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    TR       TR  
-        TR  TR       TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   &kp BSPC   TR
-        TR  TR       TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup  TR
+        TR  TR       TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    TR        TR  
+        TR  TR       TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   &kp BSPC  TR
+        TR  TR       TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup   TR
         TR  TR       TR                       &kp SPACE  TR         TR
       >;
     };
@@ -296,9 +298,9 @@ macros {
       display-name = "BLU";
       bindings = <      
         TR  BT0   BT1   BT2   BT3  BTC      BTC  BT3  BT2  BT1  BT0  TR
-        TR  BTCA  TR    TR    BTP  BTN      TR  TR  TR  TR  TR  TR
-        TR  BOUT  BOUU  BOUB  TR   TR       TR  TR  TR  TR  TR  TR
-        TR  TR    TR                        TR  TR  TR
+        TR  BTCA  TR    TR    BTP  BTN      TR   TR   TR   TR   TR  TR
+        TR  BOUT  BOUU  BOUB  TR   TR       TR   TR   TR   TR   TR  TR
+        TR  TR    TR                        TR   TR   TR
       >;
     };
 
@@ -309,7 +311,7 @@ macros {
         TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR TR
         TR  TR  TR  TR  TR  TR      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT TR TR
         TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR TR
-        TR  TR    TR                &mkp LCLK  &mkp RCLK  TR
+        TR  TR  TR                  &mkp LCLK  &mkp RCLK  TR
       >;
     };
 
