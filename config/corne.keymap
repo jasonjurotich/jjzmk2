@@ -256,10 +256,10 @@ macros {
     default_layer {
       display-name = "DEF";
       bindings = < 
-      NO  &kp Q        &kp W      &kp E      &lt NUM R   &kp T        &kp Y  &lt NUM U   &kp I            &kp O          &kp P   NO       
-      NO  &lt MED A    &lt MSE S  &lt NUM D  &lt PRO F   &kp G        &kp H  &lt PRO J   &lt NUM K        &kp L          &lt MED ENTER  NO 
-      NO  &tp LCTRL Z  &lt NAV X  &kp C      &tp LALT V  &kp B        &kp N  &tp LALT M  &tp LCMD COMMA   &tp LCTRL DOT  &kp BSPC  NO 
-      NO  &tp LSHFT ESC           &tp LCMD TAB                        &tp RSHFT SPACE    &tp RSHFT SPACE  NO  
+      NO  &kp Q        &kp W      &tp LSHFT E  &kp R       &kp T        &kp Y  &kp U       &tp RSHFT I      &kp O          &kp P   NO       
+      NO  &lt MED A    &lt MSE S  &lt NUM D    &lt PRO F   &kp G        &kp H  &lt PRO J   &lt NUM K        &kp L          &lt MED ENTER  NO 
+      NO  &tp LCTRL Z  &lt NAV X  &kp C        &tp LALT V  &kp B        &kp N  &tp LALT M  &tp LCMD COMMA   &tp LCTRL DOT  &kp BSPC  NO 
+      NO  &tp LSHFT ESC           &tp LCMD TAB                          &tp RSHFT SPACE    &tp RSHFT SPACE  NO  
       >;
     };
 
@@ -281,7 +281,7 @@ macros {
        TR  &kp EXCL   &kp PIPE  &kp STAR  &kp AT   &kp PRCNT      &kp UNDER  &kp LPAR   &kp RPAR   &kp AMPS   &kp FSLH  TR
        TR  &kp GRAVE  &kp DLLR  &kp LT    &kp GT   &kp EQUAL      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT  TR
        TR  TR         TR        TR        TR         TR           &kp SEMI   &kp COLON  &qmkdn     &kp QMARK  &kp SQT  TR
-       TR  TR         TR                                          &kp CAPS   &kp SPACE  TR
+       TR  TR         &kp ESC                                     &kp CAPS   &kp SPACE  TR
       >;
     };
 
