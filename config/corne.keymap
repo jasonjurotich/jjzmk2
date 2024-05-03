@@ -11,12 +11,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2000  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 4000  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 10    // 10
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 // #include <behaviors/mouse_move.dtsi>
+
 
 &mmv {
     acceleration-exponent = <1>;      // 1
@@ -26,7 +27,7 @@
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <40>;      // 300
+    time-to-max-speed-ms = <0>;      // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -62,7 +63,11 @@
 #define CBRIU &kp C_BRI_UP
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS BSPC>;
+    continue-list = <UNDERSCORE MINUS BSPC SPACE>;
+};
+
+&lt {
+    tapping-term-ms = <200>;
 };
   
 / {
@@ -133,8 +138,8 @@ macros {
   pss: pss {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <30>;
-    tap-ms = <30>;
+    wait-ms = <15>;
+    tap-ms = <10>;
     bindings 
         = <&kp I &kp P &kp S &kp U &kp M &kp E &kp S &kp S &kp E>
         ;
@@ -143,8 +148,8 @@ macros {
   pss2: pss2 {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    wait-ms = <30>;
-    tap-ms = <30>;
+    wait-ms = <15>;
+    tap-ms = <10>;
     bindings 
         = <&kp LS(C) &kp A &kp M &kp P &kp N3 &kp S &kp T &kp R &kp N3 &kp N9 &kp DLLR &kp DLLR>
         ;
@@ -227,6 +232,15 @@ macros {
 };
 
 / {
+  behaviors {    
+    tp: tapping_preferred {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&kp>;
+    };
+  };
   conditional_layers {
     compatible = "zmk,conditional-layers";
     blu_layer {
@@ -241,11 +255,11 @@ macros {
     // -----------------------------------------------------------------------------------------
     default_layer {
       display-name = "DEF";
-      bindings = <
-       NO  &lt NAV Q    &kp W      &kp E      &lt NUM R  &kp T        &kp Y  &lt NUM U   &kp I       &kp O    &kp P           NO  
-       NO  &lt MED A    &lt MSE S  &kp D      &lt PRO F  &kp G        &kp H  &lt PRO J   &kp K       &kp L    &lt MED ENTER   NO
-       NO  &mt LCTRL Z  &lt MSE X  &lt MSE C  &mt LALT V &kp B        &kp N  &lt LALT M  &kp COMMA   &kp DOT  &mt LCTRL BSPC  NO
-       NO  &mt LSHFT ESC      &mt LCMD TAB                            &mt RSHFT SPACE   &mt RSHFT SPACE  NO
+      bindings = < 
+      NO  &kp Q        &kp W      &kp E      &lt NUM R   &kp T        &kp Y  &lt NUM U   &kp I            &kp O          &kp P   NO       
+      NO  &lt MED A    &lt MSE S  &lt NUM D  &lt PRO F   &kp G        &kp H  &lt PRO J   &lt NUM K        &kp L          &lt MED ENTER  NO 
+      NO  &tp LCTRL Z  &lt NAV X  &kp C      &tp LALT V  &kp B        &kp N  &tp LALT M  &tp LCMD COMMA   &tp LCTRL DOT  &kp BSPC  NO 
+      NO  &tp LSHFT ESC           &tp LCMD TAB                        &tp RSHFT SPACE    &tp RSHFT SPACE  NO  
       >;
     };
 
@@ -253,10 +267,10 @@ macros {
     num_layer {
       display-name = "NUM";
       bindings = <
-       TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH   TR
-       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp ENTER  TR
-       TR  TR         TR         TR         TR         &kp PLUS     &kp COLON  &kp N1  &kp N2  &kp N3  &kp BSPC   TR
-       TR  TR         TR                                            TR         &kp N0  TR     
+       TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH  TR
+       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ENTER  TR
+       TR  TR         TR         TR         TR         &kp PLUS     &kp COLON  &kp N1  &kp N2  &kp N3  &kp BSPC  TR
+       TR  TR         TR                                            &kp N0     &kp SPACE  TR   
       >;
     };
 
@@ -264,54 +278,54 @@ macros {
     prog_layer {
       display-name = "PRO";
       bindings = <
-       TR  &kp EXCL   &kp PIPE  &kp STAR  &kp AT   &kp PRCNT      &kp UNDER  &kp LPAR   &kp RPAR   &kp AMPS   &kp FSLH   TR
-       TR  &kp GRAVE  &kp DLLR  &kp LT    &kp GT   &kp EQUAL      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT    TR
-       TR  TR         TR        TR        TR         TR           &kp SEMI  &kp COLON   &qmkdn     &kp QMARK  &kp SQT    TR
-       TR  TR         TR                                          &kp SPACE  &kp CAPS   TR
+       TR  &kp EXCL   &kp PIPE  &kp STAR  &kp AT   &kp PRCNT      &kp UNDER  &kp LPAR   &kp RPAR   &kp AMPS   &kp FSLH  TR
+       TR  &kp GRAVE  &kp DLLR  &kp LT    &kp GT   &kp EQUAL      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT  TR
+       TR  TR         TR        TR        TR         TR           &kp SEMI   &kp COLON  &qmkdn     &kp QMARK  &kp SQT  TR
+       TR  TR         TR                                          &kp CAPS   &kp SPACE  TR
       >;
     };
 
     // -----------------------------------------------------------------------------------------
     med_layer {
       display-name = "MED";
-      bindings = <      
-        TR  TR  TR  TR  TR  TR      &lbegin    &lend     CVOLD    CVOLU      &kp C_PP  TR 
-        TR  TR  TR  TR  TR  TR      &kp LEFT   &kp DOWN  &kp UP   &kp RIGHT  &accut    TR
-        TR  TR  TR  TR  TR  TR      &pss       &pss2     &copies  &locks     &ntil     TR
-        TR  TR    TR                &kp SPACE  NO        TR
+      bindings = <
+        TR  TR  TR  TR  TR  TR      &lbegin    &lend      CVOLD    CVOLU      &kp C_PP  TR 
+        TR  TR  TR  TR  TR  TR      &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &accut  TR
+        TR  TR  TR  TR  TR  TR      &pss       &pss2      &copies  &locks     &ntil  TR
+        TR  TR  TR                  TR         &kp SPACE  TR
       >;
     };
 
     // -----------------------------------------------------------------------------------------
     nav_layer {
       display-name = "NAV";
-      bindings = <      
-        TR  TR       TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    TR        TR  
-        TR  TR       TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   &kp BSPC  TR
-        TR  TR       TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup   TR
-        TR  TR       TR                       &kp SPACE  TR         TR
+      bindings = < 
+        TR  TR  TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    &kp CAPS  TR
+        TR  TR  TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   &kp BSPC  TR
+        TR  TR  TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup  TR
+        TR  TR  TR                       TR         &kp SPACE  TR 
       >;
     };
 
     // -----------------------------------------------------------------------------------------
     blu_layer {
       display-name = "BLU";
-      bindings = <      
+      bindings = <
         TR  BT0   BT1   BT2   BT3  BTC      BTC  BT3  BT2  BT1  BT0  TR
         TR  BTCA  TR    TR    BTP  BTN      TR   TR   TR   TR   TR  TR
         TR  BOUT  BOUU  BOUB  TR   TR       TR   TR   TR   TR   TR  TR
-        TR  TR    TR                        TR   TR   TR
+        TR  TR  TR                          TR   TR  TR 
       >;
     };
 
     // -----------------------------------------------------------------------------------------
     mse_layer {
       display-name = "MSE";
-      bindings = <      
-        TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR TR
-        TR  TR  TR  TR  TR  TR      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT TR TR
-        TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT TR TR
-        TR  TR  TR                  &mkp LCLK  &mkp RCLK  TR
+      bindings = < 
+        TR  TR  TR  TR  TR  TR      TR              TR              TR            TR              &caps_word  TR
+        TR  TR  TR  TR  TR  TR      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT TR  TR
+        TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT TR  TR
+        TR  TR  TR                  &mkp LCLK       &mkp RCLK  TR 
       >;
     };
 
