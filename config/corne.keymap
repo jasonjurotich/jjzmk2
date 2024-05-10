@@ -281,7 +281,7 @@ macros {
        TR  &kp EXCL   &kp PIPE  &kp STAR  &kp AT   &kp PRCNT      &kp UNDER  &kp LPAR   &kp RPAR   &kp AMPS   &kp FSLH  TR
        TR  &kp GRAVE  &kp DLLR  &kp LT    &kp GT   &kp EQUAL      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT  TR
        TR  TR         TR        TR        TR         TR           &kp SEMI   &kp COLON  &qmkdn     &kp QMARK  &kp SQT  TR
-       TR  TR         &kp ESC                                     &kp CAPS   &kp SPACE  TR
+       TR  TR         &kp ESC                                     &mkp RCLK   &kp SPACE  TR
       >;
     };
 
