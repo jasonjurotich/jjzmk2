@@ -259,7 +259,7 @@ macros {
       NO  &kp Q        &kp W      &tp LSHFT E  &kp R       &kp T        &kp Y  &kp U       &tp RSHFT I      &kp O          &kp P   NO       
       NO  &lt MED A    &lt MSE S  &lt NUM D    &lt PRO F   &kp G        &kp H  &lt PRO J   &lt NUM K        &kp L          &lt MED ENTER  NO 
       NO  &tp LCTRL Z  &lt NAV X  &kp C        &tp LALT V  &kp B        &kp N  &tp LALT M  &tp LCMD COMMA   &tp LCTRL DOT  &kp BSPC  NO 
-      NO  &tp LSHFT ESC           &tp LCMD TAB                          &tp RSHFT SPACE    &tp RSHFT SPACE  NO  
+      NO  NO           &tp LCMD TAB                                     &tp RSHFT SPACE    NO  NO  
       >;
     };
 
@@ -270,7 +270,7 @@ macros {
        TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH  TR
        TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ENTER  TR
        TR  TR         TR         TR         TR         &kp PLUS     &kp COLON  &kp N1  &kp N2  &kp N3  &kp BSPC  TR
-       TR  TR         TR                                            &kp N0     &kp SPACE  TR   
+       TR  TR         TR                                            &kp N0     TR  TR   
       >;
     };
 
@@ -281,7 +281,7 @@ macros {
        TR  &kp EXCL   &kp PIPE  &kp STAR  &kp AT   &kp PRCNT      &kp UNDER  &kp LPAR   &kp RPAR   &kp AMPS   &kp FSLH  TR
        TR  &kp GRAVE  &kp DLLR  &kp LT    &kp GT   &kp EQUAL      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT  TR
        TR  TR         TR        TR        TR         TR           &kp SEMI   &kp COLON  &qmkdn     &kp QMARK  &kp SQT  TR
-       TR  TR         &kp ESC                                     &mkp RCLK   &kp SPACE  TR
+       TR  TR         &kp ESC                                     &mkp RCLK  TR  TR
       >;
     };
 
@@ -292,7 +292,7 @@ macros {
         TR  TR  TR  TR  TR  TR      &lbegin    &lend      CVOLD    CVOLU      &kp C_PP  TR 
         TR  TR  TR  TR  TR  TR      &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &accut  TR
         TR  TR  TR  TR  TR  TR      &pss       &pss2      &copies  &locks     &ntil  TR
-        TR  TR  TR                  TR         &kp SPACE  TR
+        TR  TR  TR                  TR         TR  TR
       >;
     };
 
@@ -303,7 +303,7 @@ macros {
         TR  TR  TR  TR  TR  TR           CBRID      CBRIU      CSPRE      CSNEX    &kp CAPS  TR
         TR  TR  TR  TR  TR  TR           &spacl     TR         &spacu     &spacr   &kp BSPC  TR
         TR  TR  TR  TR  TR  TR           &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  &ntilup  TR
-        TR  TR  TR                       TR         &kp SPACE  TR 
+        TR  TR  TR                       TR         TR  TR 
       >;
     };
 
@@ -325,7 +325,7 @@ macros {
         TR  TR  TR  TR  TR  TR      TR              TR              TR            TR              &caps_word  TR
         TR  TR  TR  TR  TR  TR      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT TR  TR
         TR  TR  TR  TR  TR  TR      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT TR  TR
-        TR  TR  TR                  &mkp LCLK       &mkp RCLK  TR 
+        TR  TR  TR                  &mkp LCLK       TR  TR 
       >;
     };
 
