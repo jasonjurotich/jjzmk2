@@ -69,10 +69,6 @@
 &lt {
     tapping-term-ms = <200>;
 };
-
-&mt {
-    tapping-term-ms = <40>;
-};
   
 / {
 macros {
@@ -236,6 +232,15 @@ macros {
 };
 
 / {
+  behaviors {    
+    tp: tapping_preferred {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&kp>;
+    };
+  };
   conditional_layers {
     compatible = "zmk,conditional-layers";
     blu_layer {
@@ -251,10 +256,10 @@ macros {
     default_layer {
       display-name = "DEF";
       bindings = < 
-      NO  &kp Q        &kp W      &mt LSHFT E  &kp R       &kp T        &kp Y  &kp U       &mt RSHFT I      &kp O          &kp P   NO       
+      NO  &kp Q        &kp W      &tp LSHFT E  &kp R       &kp T        &kp Y  &kp U       &tp RSHFT I      &kp O          &kp P   NO       
       NO  &lt MED A    &lt MSE S  &lt NUM D    &lt PRO F   &kp G        &kp H  &lt PRO J   &lt NUM K        &kp L          &lt MED ENTER  NO 
-      NO  &mt LCTRL Z  &lt NAV X  &kp C        &mt LALT V  &kp B        &kp N  &mt LALT M  &mt LCMD COMMA   &mt LCTRL DOT  &kp BSPC  NO 
-      NO  NO           &mt LCMD TAB                                     &mt RSHFT SPACE    NO  NO  
+      NO  &tp LCTRL Z  &lt NAV X  &kp C        &tp LALT V  &kp B        &kp N  &tp LALT M  &tp LCMD COMMA   &tp LCTRL DOT  &kp BSPC  NO 
+      NO  NO           &tp LCMD TAB                                     &tp RSHFT SPACE    NO  NO  
       >;
     };
 
