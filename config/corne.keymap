@@ -267,9 +267,9 @@ macros {
     num_layer {
       display-name = "NUM";
       bindings = <
-       TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH  TR
-       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ENTER  TR
-       TR  TR         TR         TR         TR         &kp PLUS     &kp COLON  &kp N1  &kp N2  &kp N3  &kp BSPC  TR
+       TR  &excldn    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS  TR
+       TR  &kp GRAVE  &kp TILDE  &kp CARET  &kp AMPS   &kp STAR     &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS  TR
+       TR  TR         TR         TR         TR         &kp PLUS     &kp EQUAL  &kp N1  &kp N2  &kp N3  &copies  TR
        TR  TR         TR                                            &kp N0     TR  TR   
       >;
     };
@@ -278,9 +278,9 @@ macros {
     prog_layer {
       display-name = "PRO";
       bindings = <
-       TR  &kp EXCL   &kp PIPE  &kp STAR  &kp AT   &kp PRCNT      &kp UNDER  &kp LPAR   &kp RPAR   &kp AMPS   &kp FSLH  TR
-       TR  &kp GRAVE  &kp DLLR  &kp LT    &kp GT   &kp EQUAL      &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT  TR
-       TR  TR         TR        TR        TR         TR           &kp SEMI   &kp COLON  &qmkdn     &kp QMARK  &kp SQT  TR
+       TR  &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp BSLH  &kp LPAR   &kp RPAR   &kp AMPS   &kp UNDER  TR
+       TR  &kp GRAVE  TR         &kp LT     &kp GT     &kp EQUAL      &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC   &kp DQT  TR
+       TR  TR         &kp TILDE  &kp CARET  TR         TR             &kp SEMI  &kp COLON  &qmkdn     &kp QMARK  &kp SQT  TR
        TR  TR         &kp ESC                                     &mkp RCLK  TR  TR
       >;
     };
@@ -291,7 +291,7 @@ macros {
       bindings = <
         TR  TR  TR  TR  TR  TR      &lbegin    &lend      CVOLD    CVOLU      &kp C_PP  TR 
         TR  TR  TR  TR  TR  TR      &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &accut  TR
-        TR  TR  TR  TR  TR  TR      &pss       &pss2      &copies  &locks     &ntil  TR
+        TR  TR  TR  TR  TR  TR      &pss       &pss2      &ntil  &locks     &kp BSLH  TR
         TR  TR  TR                  TR         TR  TR
       >;
     };
